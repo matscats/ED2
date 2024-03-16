@@ -26,7 +26,7 @@ $ . venv/bin/activate
 
 3. Install the required dependencies:
 `
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 `
 
 
