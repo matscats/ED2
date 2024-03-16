@@ -1,6 +1,6 @@
 import string
-from PyPDF2 import PdfReader
 import re
+from PyPDF2 import PdfReader
 
 
 class Corpus:
@@ -36,8 +36,7 @@ class Corpus:
         """
         Removes punctuation from the text
         """
-        punctuation = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}—~"""
-        translator = str.maketrans("", "", punctuation)
+        translator = str.maketrans("", "", string.punctuation)
         self.text = self.text.translate(translator)
 
     def _remove_digits(self):
