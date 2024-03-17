@@ -32,7 +32,7 @@ $ pip install -r requirements.txt
 
 4. Execute the code from the root directory of the project:
 `
-$ streamlit run src/main.py
+$ streamlit run src/app.py
 `
 
 ## Usage
