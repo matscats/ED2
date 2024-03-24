@@ -2,6 +2,8 @@
 
 This Python program is designed to store words in an AVLTree data structure, enabling the implementation of an autocomplete feature. Given a prefix, the program returns a list of words found in the tree.
 
+More about the code can be visualized in [this youtube video](https://www.youtube.com/watch?v=o3w2e4P1g_A)
+
 ## Purpose
 The purpose of this program is to demonstrate the implementation of an autocomplete feature using an AVLTree data structure. Words are stored in the tree, and the program allows users to retrieve words based on a given prefix efficiently.
 
