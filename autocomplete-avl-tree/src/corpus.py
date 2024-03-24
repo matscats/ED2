@@ -72,7 +72,13 @@ class Corpus:
             self._remove_digits()
 
     def get_text(self):
+        """
+        Get all text
+        """
         return self.text
 
     def get_words(self):
+        """
+        Get all words from the text
+        """
         return self.text.split()
