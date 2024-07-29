@@ -1,6 +1,5 @@
 import pandas as pd
 import networkx as nx
-from itertools import combinations
 
 
 class CSVReader:
@@ -47,19 +46,17 @@ class NetworkAnalysis:
 
 
 def main():
-    # Read the CSV file
-    reader = CSVReader("../requisito_01/ods_3.csv")
+    csv_file = "../requisito_01/ods_17.csv"  # Altera aqui
+
+    reader = CSVReader(csv_file)
     df = reader.read_csv()
 
-    # Build the graph
     graph_builder = GraphBuilder(df)
     G = graph_builder.build_graph()
 
-    # Analyze the network
     network_analysis = NetworkAnalysis(G)
     analysis_results = network_analysis.analyze()
 
-    # Print analysis results
     print(f"Number of vertices: {analysis_results['num_vertices']}")
     print(f"Number of edges: {analysis_results['num_edges']}")
     print(

@@ -1,6 +1,6 @@
 # Resultados e comentários
 
-A partir do código [em python](./main.py) gerou-se um gráfico bipartido sobre a assortatividade em relação ao grau dos nós da rede, como pode ser visto na [pasta de resultados](../resultados/).
+A partir do código [em python](./main.py) gerou-se um gráfico bipartido sobre a assortatividade em relação ao grau dos nós da rede, como pode ser visto na [pasta de resultados](./resultados/).
 
 Em particular, a ODS 3 (Saúde e Bem-Estar), a ODS 17 (Parcerias e Meios de Implementação) e a ODS 15 (Vida Terrestre) seguiram um padrão semelhante. À medida que o grau de um nó aumenta, o grau médio dos vizinhos também aumenta. Este comportamento indica uma estrutura colaborativa entre os autores dessas ODSs. Esse fenômeno sugere que os autores com um alto número de coautorias tendem a colaborar com outros autores que também são bem conectados. Essa característica é típica de redes sociais densas e pode ser um sinal de que existem grupos de pesquisa ou laboratórios colaborativos trabalhando intensamente nessas ODSs.
 

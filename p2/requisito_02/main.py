@@ -49,18 +49,15 @@ class Visualizer:
         self.graph = graph
 
     def plot_assortativity(self):
-        # Calcular o grau dos nós e o grau médio dos vizinhos
         degrees = dict(self.graph.degree())
         avg_neighbor_degrees = nx.average_neighbor_degree(self.graph)
 
-        # Preparar os dados para o seaborn
         data = {
             "Node Degree": list(degrees.values()),
             "Average neighbor degree": list(avg_neighbor_degrees.values()),
         }
         df = pd.DataFrame(data)
 
-        # Criar o gráfico
         plt.figure(figsize=(10, 6))
         sns.regplot(
             x="Node Degree", y="Average neighbor degree", data=df, scatter_kws={"s": 50}
@@ -70,17 +67,18 @@ class Visualizer:
         plt.savefig("node_degree_assortativity.png")
 
 
-# Uso das classes para realizar a tarefa
-csv_file = "../requisito_01/ods_17.csv"
+def main() -> None:
+    csv_file = "../requisito_01/ods_17.csv"  # Altere aqui
 
-# Processamento dos dados
-data_processor = DataProcessor(csv_file)
-df = data_processor.read_data()
+    data_processor = DataProcessor(csv_file)
+    df = data_processor.read_data()
 
-# Construção do grafo
-graph_builder = GraphBuilder(df)
-G = graph_builder.build_graph()
+    graph_builder = GraphBuilder(df)
+    G = graph_builder.build_graph()
 
-# Visualização
-visualizer = Visualizer(G)
-visualizer.plot_assortativity()
+    visualizer = Visualizer(G)
+    visualizer.plot_assortativity()
+
+
+if __name__ == "__main__":
+    main()
