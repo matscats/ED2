@@ -20,17 +20,14 @@ class GraphBuilder:
         self.G = nx.Graph()
 
     def build_graph(self):
-        for index, row in self.df.iterrows():
+        for _, row in self.df.iterrows():
             authors = row["Authors"].split("; ")
             for i, author1 in enumerate(authors):
                 for author2 in authors[i + 1 :]:
                     if not self.G.has_edge(author1, author2):
                         self.G.add_edge(author1, author2, weight=1)
-                    else:
-                        self.G[author1][author2]["weight"] += 1
 
-        # Adicionar atributos dos nós (ID Scopus, nome e afiliação)
-        for index, row in self.df.iterrows():
+        for _, row in self.df.iterrows():
             authors = row["Authors"].split("; ")
             author_ids = row["Author(s) ID"].split("; ")
             affiliations = row["Affiliations"].split("; ")
@@ -74,7 +71,7 @@ class Visualizer:
 
 
 # Uso das classes para realizar a tarefa
-csv_file = "../ods/ods_3.csv"
+csv_file = "../requisito_01/ods_17.csv"
 
 # Processamento dos dados
 data_processor = DataProcessor(csv_file)

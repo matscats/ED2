@@ -1,9 +1,6 @@
 import pandas as pd
 import networkx as nx
-import matplotlib.pyplot as plt
-import seaborn as sns
 from itertools import combinations
-from networkx.algorithms import bipartite
 
 
 class CSVReader:
@@ -21,12 +18,11 @@ class GraphBuilder:
 
     def build_graph(self):
         for _, row in self.df.iterrows():
-            authors = row["Authors"].split(", ")
-            for author1, author2 in combinations(authors, 2):
-                if self.G.has_edge(author1, author2):
-                    self.G[author1][author2]["weight"] += 1
-                else:
-                    self.G.add_edge(author1, author2, weight=1)
+            authors = row["Authors"].split("; ")
+            for i, author1 in enumerate(authors):
+                for author2 in authors[i + 1 :]:
+                    if not self.G.has_edge(author1, author2):
+                        self.G.add_edge(author1, author2, weight=1)
         return self.G
 
 
@@ -52,7 +48,7 @@ class NetworkAnalysis:
 
 def main():
     # Read the CSV file
-    reader = CSVReader("../ods/ods_17.csv")
+    reader = CSVReader("../requisito_01/ods_3.csv")
     df = reader.read_csv()
 
     # Build the graph
