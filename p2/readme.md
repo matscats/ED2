@@ -18,7 +18,6 @@ Por fim, para análise de resultados, foi montado, para cada ODS, um gráfico bi
 No geral, os pesquisadores da UFRN mostram uma boa conectividade global em áreas com um número maior de pesquisadores e colaborações, indicando uma rede bem estabelecida de coautoria. Há uma tendência significativa de formação de clusters colaborativos, sugerindo que os pesquisadores trabalham frequentemente dentro de grupos bem definidos. A assortatividade de grau varia entre as redes, com algumas áreas mostrando uma forte tendência para colaborações entre pesquisadores com graus semelhantes, enquanto outras são mais variadas. A fragmentação é mais pronunciada em redes menores, mas ainda existe uma conectividade substancial dentro dos maiores componentes dessas redes.
 
 ## Reprodutibilidade dos resultados
-
 Para verificar os resultados, deve-se instalar as dependência necessárias do trabalho. Para isso, deve-se usar o gerenciador de pacotes pip e executar o comando abaixo a partir da pasta root:
 `
  $ pip install -r requirements.txt
@@ -33,6 +32,9 @@ Além disso, para reproduzir cada tabela do requisito_03, deve-se entrar na [pas
 `
  $ python main.py
 `
+
+## Explicação em vídeo
+Além das explicações evidenciadas, pode-se conferir o [vídeo] para uma discussão levantada pelo autor acerca deste trabalho
 
 ## Autor
 Trabalho realizado individualmente pelo aluno Mateus Cavalcanti Alves Teixeira Silva.

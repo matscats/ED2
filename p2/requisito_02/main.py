@@ -21,26 +21,26 @@ class GraphBuilder:
 
     def build_graph(self):
         for _, row in self.df.iterrows():
+            authors_id = row["Author(s) ID"].split("; ")
             authors = row["Authors"].split("; ")
-            for i, author1 in enumerate(authors):
-                for author2 in authors[i + 1 :]:
-                    if not self.G.has_edge(author1, author2):
-                        self.G.add_edge(author1, author2, weight=1)
-
-        for _, row in self.df.iterrows():
-            authors = row["Authors"].split("; ")
-            author_ids = row["Author(s) ID"].split("; ")
             affiliations = row["Affiliations"].split("; ")
-            for author, author_id, affiliation in zip(
-                authors, author_ids, affiliations
-            ):
-                if author not in self.G.nodes:
-                    self.G.add_node(
-                        author,
-                        id_scopus=author_id,
-                        name=author,
-                        affiliation=affiliation,
-                    )
+
+            authors_information = list(zip(authors_id, authors, affiliations))
+
+            for index, (id_1, name_1, affiliation_1) in enumerate(authors_information):
+                if not self.G.has_node(id_1):
+                    self.G.add_node(id_1, name=name_1, affiliation=affiliation_1)
+
+                for id_2, name_2, affiliation_2 in authors_information[index + 1 :]:
+                    if not self.G.has_node(id_2):
+                        self.G.add_node(id_2, name=name_2, affiliation=affiliation_2)
+
+                    if not self.G.has_edge(id_1, id_2):
+                        self.G.add_edge(
+                            id_1,
+                            id_2,
+                            weight=1,
+                        )
         return self.G
 
 
