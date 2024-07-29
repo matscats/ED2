@@ -34,7 +34,7 @@ Além disso, para reproduzir cada tabela do requisito_03, deve-se entrar na [pas
 `
 
 ## Explicação em vídeo
-Além das explicações evidenciadas, pode-se conferir o [vídeo] para uma discussão levantada pelo autor acerca deste trabalho
+Além das explicações evidenciadas, pode-se conferir o [vídeo](https://youtu.be/YQE7fkQo7qg) para uma discussão levantada pelo autor acerca deste trabalho
 
 ## Autor
 Trabalho realizado individualmente pelo aluno Mateus Cavalcanti Alves Teixeira Silva.
