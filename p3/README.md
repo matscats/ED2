@@ -18,11 +18,11 @@ Ademais, todos os comentários acerca dos códigos e dos resultados estão conti
 
 ## Reprodutibilidade
 
--  Para reproduzir os resultados, deve-se carregar o Notebook em algum ambiente de execução.
+- Para reproduzir os resultados, deve-se carregar o Notebook em algum ambiente de execução.
 
 - Para a confecção deste projeto, utilizou-se o Google colab.
 
-- Além disso, em seu ambiente de execução, deve-se realizar o upload do arquivo grafo_gephi.graphml, necessário para a visualização dos resultados.
+- Além disso, em seu ambiente de execução, deve-se realizar o upload do arquivo grafo_gephi.graphml, contido nesta pasta, necessário para a visualização dos resultados.
 
 ## Vídeo
 
